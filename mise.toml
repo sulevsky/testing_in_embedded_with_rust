@@ -1,0 +1,14 @@
+[env]
+DEFMT_LOG = "trace"
+
+[tasks.tests]
+alias = "t"
+run = "cargo test --workspace --exclude stm32-target"
+
+[tasks.target-tests]
+alias = "tt"
+run = "(cd stm32-target && cargo test)"
+
+[tasks.run-target]
+alias = "rt"
+run = "(cd stm32-target && cargo run)"

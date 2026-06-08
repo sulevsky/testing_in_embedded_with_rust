@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "bme280-driver",
+    "stm32-target",
+    "application",
+    "integration-tests",
+]

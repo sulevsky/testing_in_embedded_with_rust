@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420">
+  <rect width="640" height="420" fill="white" rx="8"/>
+
+  <!-- Title -->
+  <text x="340" y="35" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="15"
+        font-weight="bold" fill="#2d2d2d">
+    Boehm's Curve: Cost to Fix a Bug by Phase
+  </text>
+
+  <!-- Grid lines -->
+  <g stroke="#eeeeee" stroke-width="1">
+    <line x1="90" y1="60"  x2="590" y2="60"/>
+    <line x1="90" y1="127" x2="590" y2="127"/>
+    <line x1="90" y1="195" x2="590" y2="195"/>
+    <line x1="90" y1="263" x2="590" y2="263"/>
+    <line x1="90" y1="330" x2="590" y2="330"/>
+  </g>
+
+  <!-- Vertical phase separators -->
+  <g stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,3">
+    <line x1="215" y1="60" x2="215" y2="330"/>
+    <line x1="340" y1="60" x2="340" y2="330"/>
+    <line x1="465" y1="60" x2="465" y2="330"/>
+    <line x1="590" y1="60" x2="590" y2="330"/>
+  </g>
+
+  <!-- Axes -->
+  <line x1="90" y1="55"  x2="90"  y2="335" stroke="#aaa" stroke-width="1.5"/>
+  <line x1="85" y1="330" x2="595" y2="330" stroke="#aaa" stroke-width="1.5"/>
+
+  <!-- Y-axis label -->
+  <text x="18" y="195" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="12" fill="#777"
+        transform="rotate(-90,18,195)">
+    Relative cost to fix
+  </text>
+
+  <!-- Area fill under curve -->
+  <path d="M 90,324
+           C 132,322 173,323 215,319
+           C 257,315 298,312 340,300
+           C 382,288 423,287 465,247
+           C 507,207 548,122 590,60
+           L 590,330 L 90,330 Z"
+        fill="#c0392b" fill-opacity="0.07"/>
+
+  <!-- Curve -->
+  <path d="M 90,324
+           C 132,322 173,323 215,319
+           C 257,315 298,312 340,300
+           C 382,288 423,287 465,247
+           C 507,207 548,122 590,60"
+        fill="none" stroke="#c0392b" stroke-width="2.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Data points -->
+  <g fill="white" stroke="#c0392b" stroke-width="2">
+    <circle cx="90"  cy="324" r="5"/>
+    <circle cx="215" cy="319" r="5"/>
+    <circle cx="340" cy="300" r="5"/>
+    <circle cx="465" cy="247" r="5"/>
+    <circle cx="590" cy="60"  r="5"/>
+  </g>
+
+  <!-- X-axis phase labels -->
+  <g text-anchor="middle" font-family="Arial, sans-serif"
+     font-size="11" fill="#555">
+    <text x="90"  y="352">Requirements</text>
+    <text x="215" y="352">Design</text>
+    <text x="340" y="352">Coding</text>
+    <text x="465" y="352">Testing</text>
+    <text x="590" y="352">Production</text>
+  </g>
+</svg>

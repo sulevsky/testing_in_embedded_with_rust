@@ -1,0 +1,11 @@
+[package]
+name = "integration-tests"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bme280-driver = { path = "../bme280-driver" }
+application = { path = "../application" }
+
+[dev-dependencies]
+embedded-hal-mock = "0.11.1"
